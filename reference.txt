@@ -1,0 +1,61 @@
+=== Pods Font End Plugin ===
+Contributors: Firewolf
+Tags: Pods Front End Plugin, WordPress Plugin
+Requires at least: 4.5
+Tested up to: 4.7.4
+Stable tag: 3.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  
+== Description ==
+ 
+Pods Front End is the WordPress plugin for editing and list posts.
+
+== Installation ==
+1. Unpack the `download-package`.
+2. Upload the file to the `/wp-content/plugins/` directory.
+3. Activate the plugin through the `Plugins` menu in WordPress.
+4. Done and Ready.
+ 
+== Frequently Asked Questions ==
+ 
+= How to add PAGE =
+
+1. Shortcode Rules ( Required )
+	Add / Edit Shortcode =>	[post-edit slug='{$pods_slug}']
+	List Shortcode 		 => [post-list slug='{$pods_slug}']
+	Set Shortcode		 => [post-set-detail slug='{$pods_slug}']
+
+2. Page Urls ( Required )
+	Add / Edit Page Url => home_url() . '/{$pods_slug}-edit
+	List Page Url 		=> home_url() . '/{$pods_slug}-list
+	Set Page Url 		=> home_url() . '/{$pods_slug}-set-detail
+
+== Referance functions ==
+
+1. get_pod_detail()
+	https://pods.io/docs/code/pods-api/load-pod/
+
+2. get_pod_taxonomies()  
+	https://wordpress.stackexchange.com/questions/20574/how-to-get-all-taxonomies-of-a-post-type
+
+
+== TEST urls ==
+
+1.サービス 	service
+	Add 			https://localhost/service-edit/?id=0
+	Edit 			https://localhost/service-edit/?id=810
+	List 			https://localhost/service-list/
+	Set 			https://localhost/service-set-detail/?id=810
+
+2.ブログ 		userblog
+	Add 			https://hogo-friends.com/userblog-edit/?id=0
+	Edit 			https://hogo-friends.com/userblog-edit/?id=846
+	List 			https://hogo-friends.com/userblog-list/
+	Set 			https://hogo-friends.com/userblog-set-detail/?id=846
+
+3.MUSIC 		music
+	Add 			https://localhost/music-edit/?id=0
+	Edit 			https://localhost/music-edit/?id=846
+	List 			https://localhost/music-list/
+	Set 			https://localhost/music-set-detail/?id=846
